@@ -16,3 +16,37 @@ __pycache__/
 /goals.md
 /CLAUDE.md.bak
 /goals.md.bak
+
+# ---------------------------------------------------------------------------
+# Content the kit generates at runtime.
+#
+# The repo root IS the kit, so running onboarding or any ritual in place writes
+# real entries into these folders. Without these rules a test run leaves your
+# own journal, decisions and meeting notes sitting as untracked files in a
+# public repository. The folder READMEs are re-included because git does not
+# track empty directories, and those READMEs are what make the structure
+# survive a download at all.
+#
+# Better still: test from the release zip in a separate folder — see CLAUDE.md.
+# ---------------------------------------------------------------------------
+journal/daily/*
+journal/weekly/*
+journal/monthly/*
+decisions/*
+meetings/*
+people/*
+01_Projects/*
+02_Areas/*
+03_Resources/*
+04_Archive/*
+
+!journal/daily/README.md
+!journal/weekly/README.md
+!journal/monthly/README.md
+!decisions/README.md
+!meetings/README.md
+!people/README.md
+!01_Projects/README.md
+!02_Areas/README.md
+!03_Resources/README.md
+!04_Archive/README.md

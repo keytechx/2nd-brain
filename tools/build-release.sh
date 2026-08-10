@@ -114,6 +114,22 @@ if [ "$fail" -ne 0 ]; then
   exit 1
 fi
 
+# --- VERSION must agree with the tag you are about to cut -------------------
+#
+# The zip carries VERSION inside it. If VERSION says 1.0.0 and the release is
+# tagged v1.0.1, the file an executive downloads lies about which release it is,
+# and there is no way for them to tell. Warn loudly rather than fail: the first
+# build of a version legitimately happens before its tag exists.
+
+staged_version=$(tr -d '[:space:]' < dist/2nd-brain/VERSION)
+latest_tag=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+
+if [ -n "$latest_tag" ] && [ "v$staged_version" != "$latest_tag" ]; then
+  echo "note: VERSION is $staged_version, latest tag is $latest_tag." >&2
+  echo "      If you are cutting a new release, bump VERSION and commit it first." >&2
+  echo "      If you are rebuilding the current release, this is expected." >&2
+fi
+
 # --- pack ------------------------------------------------------------------
 
 (cd dist && zip -rq 2nd-brain.zip 2nd-brain)
