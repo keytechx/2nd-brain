@@ -40,9 +40,10 @@ and to avoid them on sensitive material.
 
 If they decline, note it plainly and carry on. It is their call, not yours.
 
-**3. Can Claude write to the folder?** Write a scratch file and delete it. If that fails,
-the folder is not connected to this session — or, on a managed account, an administrator
-has set it read-only.
+**3. Can Claude write to the folder?** Write `.setup-write-test` at the folder root, then
+**delete it.** Name it exactly, so the delete has an unambiguous target and nothing is left
+behind. If either step fails, the folder is not connected to this session — or, on a managed
+account, an administrator has set it read-only.
 
 **4. Can skills be installed?** Skills need code execution enabled (Settings → Features),
 and on a managed account an administrator can hide skill upload entirely. If either is off,
