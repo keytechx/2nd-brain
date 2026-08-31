@@ -50,3 +50,15 @@ people/*
 !02_Areas/README.md
 !03_Resources/README.md
 !04_Archive/README.md
+
+# ---------------------------------------------------------------------------
+# Batch-harness runtime state (tools/run-batch.sh).
+#
+# The harness defaults its project root to this repo's PARENT, so these should
+# never appear here. They are listed anyway because rsync in build-release.sh
+# is a blacklist: anything at the repo root that is not excluded SHIPS to an
+# executive's download. tools/ itself is excluded, so the harness never ships.
+# ---------------------------------------------------------------------------
+/.batch-run/
+/outputs/
+/prompts/
