@@ -219,11 +219,47 @@ Everything else is a Resource until it is an Archive.
 
 ## Updating
 
-Kit files — `README.md`, `onboarding.md`, `VERSION`, and everything in `_kit/` — can be
-replaced wholesale from a newer release.
+New releases fix and improve the commands. Updating is manual and takes a couple of minutes.
 
-**Everything else is yours and must never be overwritten**: `CLAUDE.md`, `goals.md`, and
-all your content folders.
+**1. Download the new `2nd-brain.zip`** from the [Releases page](../../releases) and unzip it.
+
+**2. Replace these, and only these,** in your existing `2nd-brain` folder — drag them across
+and let them overwrite:
+
+- `README.md`
+- `onboarding.md`
+- `VERSION`
+- the whole `_kit` folder
+
+**3. Re-run setup.** Open your Second Brain project and paste the same line you used the first
+time:
+
+```
+Please review the onboarding.md file and guide me through the setup
+```
+
+Claude will see you are already set up, **skip the interview**, and rebuild your commands from
+the new files. Tap **Save skill** on every card it hands you, and choose **Update skill** if it
+asks.
+
+> ⚠️ **Step 3 is the update.** Steps 1 and 2 only replace files on your computer. Your commands
+> are not run from that folder — they were installed into Claude itself during setup, and they
+> keep running the old version until you rebuild them. Replacing the files and stopping there
+> leaves you on the old commands, and nothing on screen will tell you.
+
+If you are ever unsure whether you rebuilt, just do step 3 again. It is safe to repeat.
+
+**Never overwrite these — they are yours:**
+
+- `CLAUDE.md` — how Claude works with you, and what you said must stay private
+- `goals.md` — your goals and open commitments, which the commands write to every week
+- every content folder: `01_Projects`, `02_Areas`, `03_Resources`, `04_Archive`, `journal`,
+  `decisions`, `meetings`, `people`
+
+**One consequence worth knowing.** Because `CLAUDE.md` and `goals.md` are never touched by an
+update, anything a release changes about *how those two files are written* arrives for new users
+only. Your commands update; those two stay exactly as you built them. Where that matters, the
+release notes will say so and you can add it by hand.
 
 ---
 

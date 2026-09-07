@@ -40,9 +40,10 @@ and to avoid them on sensitive material.
 
 If they decline, note it plainly and carry on. It is their call, not yours.
 
-**3. Can Claude write to the folder?** Write a scratch file and delete it. If that fails,
-the folder is not connected to this session — or, on a managed account, an administrator
-has set it read-only.
+**3. Can Claude write to the folder?** Write `.setup-write-test` at the folder root, then
+**delete it.** Name it exactly, so the delete has an unambiguous target and nothing is left
+behind. If either step fails, the folder is not connected to this session — or, on a managed
+account, an administrator has set it read-only.
 
 **4. Can skills be installed?** Skills need code execution enabled (Settings → Features),
 and on a managed account an administrator can hide skill upload entirely. If either is off,
@@ -61,11 +62,26 @@ Check the folder root for `CLAUDE.md` and `goals.md`.
 **If either exists, this executive is already set up.** Do not run the interview and do not
 regenerate those files. `goals.md` is a live record that the rituals write to — rebuilding
 it destroys their open commitments — and `CLAUDE.md` holds the confidentiality list they
-agreed in question 13. Say so plainly:
+agreed in question 13.
 
-> *"You're already set up, so I'm not going to redo your interview. It looks like the
-> folder moved — I'll re-point your commands at the new location and leave everything else
-> exactly as it is."*
+**Find out why they are here before you say anything about the folder.** There are two reasons
+to re-run setup and they need different words. Ask rather than assume:
+
+> *"You're already set up, so I'm not going to redo your interview. Are you updating to a new
+> version, or has the folder moved? Either way I'll rebuild your commands and leave everything
+> else exactly as it is."*
+
+- **Updating to a new version.** The rebuild **is** the update. Their commands were installed
+  into their account during setup and are not read from this folder, so until they save the new
+  cards in Phase 4 they are still running the old ones. Say that in one line — it is the single
+  thing most likely to be misunderstood, and nothing on their screen would reveal it.
+- **The folder moved.** Confirm the new path and rebuild against it.
+- **They are not sure, or both.** Rebuild anyway. It is the same work either way and repeating
+  it is safe.
+
+**Do not try to work out which version they are on.** Nothing records what they last installed,
+so any answer would be a guess presented as a fact. If they know, use it; if not, rebuild
+everything and move on.
 
 Then read both files and confirm the current path.
 
